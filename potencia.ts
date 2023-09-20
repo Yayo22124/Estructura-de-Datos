@@ -4,6 +4,6 @@ function potencia(n:number, e:number):number {
     }
 
     return (
-        
-    )
+        Math.floor
+    )|
 }
