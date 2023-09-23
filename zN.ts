@@ -7,15 +7,13 @@
 // 8,   9,  10,     11,
 // 12,  13,   14,    15 Resultado = 3
 
-const z = (n:number, a:number) => {
-    if (n <= (a-1)) {
-        return n;
-    } else {
-        return z(n - a,a);
-    }
+function decimalTOn(z:number, n:number){
+
+    return z <= (n - 1) ? z : decimalTOn(z - n, n);
+    
 };
 
-console.log(z(9, 6));
+console.log(decimalTOn(9, 6));
 
 // 0,  1,  2,  3,  4,  5,
 // 6,  7,  8,  9,  10, 11,
