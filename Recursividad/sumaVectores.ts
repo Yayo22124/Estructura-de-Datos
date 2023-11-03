@@ -1,5 +1,5 @@
 // Suma de dos vectores
-const arreglo1 = [5,5,5,5,1];
+const arreglo1 = [5,5,5,5,1,1];
 const arreglo2 = [1,2,3,4,1];
 
 // 5+1 = 6 

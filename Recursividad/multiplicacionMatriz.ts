@@ -15,18 +15,22 @@ const matriz = [
     [1,1,1,1]
 ];
 
-const recorrerMatriz = (i:number = 0, j:number = 0) => {
+function recorrerMatriz( n1:number, i:number = 0, j:number = 0) {
+    let resultado:number[][] = [[],[],[]];
+
     if (i >= 3) {
         return "Fin";
 
-    } else if (j >= 4) {
-        return recorrerMatriz(i+1, 0)
+    } else if (j >= 3) {
+        return recorrerMatriz(n1,i+1, j = 0)
     } else {
-        console.log(matriz[i][j]);
-        return recorrerMatriz(i,j+1)
+        resultado[i][j] = matriz[i][j] * n1;
+        console.log(`${resultado[i][j]} = ${matriz[i][j]} + ${n1}`);
+
+        return recorrerMatriz(n1,i,j+1)
     }
 
     
 }
 
-recorrerMatriz()
+recorrerMatriz(5)

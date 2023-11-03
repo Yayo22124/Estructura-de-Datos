@@ -11,19 +11,18 @@
 
 const matriz = [
     [0,1,2,3],
-    [4,5,6,7],
-    [1,1,1,1]
+    [4,5,6,7]
 ];
 
 const recorrerMatriz = (i:number = 0, j:number = 0) => {
-    if (i >= 3) {
+    if (i >= 2 && j >= 3) {
         return "Fin";
 
-    } else if (j >= 4) {
-        return recorrerMatriz(i+1, 0)
+    } else if (i >= 2) {
+        return recorrerMatriz(0, j+1)
     } else {
         console.log(matriz[i][j]);
-        return recorrerMatriz(i,j+1)
+        return recorrerMatriz(i+1,j)
     }
 
     
